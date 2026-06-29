@@ -13,6 +13,8 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200);
+        $response->assertOk();
+        $response->assertSee('Crafting thoughtful digital experiences.');
+        $response->assertSee('white-crumpled-paper-texture-background-design-space-white-tone.jpg', false);
     }
 }
