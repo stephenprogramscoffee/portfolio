@@ -2,113 +2,75 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('partials.head', ['title' => config('app.name')])
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=playfair-display:400,500,600|instrument-sans:400,500,600" rel="stylesheet" />
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:500,600,700|karla:500|crimson-text:400|architects-daughter:400" rel="stylesheet" />
     </head>
-    <body class="min-h-dvh antialiased text-neutral-800">
-        <div
-            class="paper-background fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-            style="background-image: url('{{ asset('images/white-crumpled-paper-texture-background-design-space-white-tone.jpg') }}');"
-            aria-hidden="true"
-        ></div>
-
-        <div class="relative flex min-h-dvh flex-col">
-            <header class="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-8 lg:px-10">
-                <a href="{{ route('home') }}" class="font-serif text-lg font-medium tracking-tight text-neutral-900">
-                    {{ config('app.name') }}
+    <body class="flex min-h-dvh flex-col bg-[#e0e0e0] font-sans antialiased">
+        <section class="relative flex min-h-[720px] flex-1 flex-col bg-white">
+            <header class="shrink-0 flex items-start justify-between px-6 pt-10 sm:px-14 sm:pt-14 lg:pr-[68px] lg:pl-[57px]">
+                <a href="{{ route('home') }}" class="font-['Architects_Daughter'] text-[30px] leading-9 text-[#1bf84c]">
+                    STEPHEN
                 </a>
 
-                <nav class="flex items-center gap-6 text-sm font-medium text-neutral-600">
-                    <a href="#work" class="transition-colors hover:text-neutral-900">Work</a>
-                    <a href="#about" class="transition-colors hover:text-neutral-900">About</a>
-                    <a href="#contact" class="transition-colors hover:text-neutral-900">Contact</a>
-
-                    @if (Route::has('login'))
-                        @auth
-                            <a href="{{ url('/dashboard') }}" class="rounded-full border border-neutral-300/80 bg-white/40 px-4 py-1.5 backdrop-blur-sm transition-colors hover:border-neutral-400 hover:text-neutral-900">
-                                Dashboard
-                            </a>
-                        @else
-                            <a href="{{ route('login') }}" class="rounded-full border border-neutral-300/80 bg-white/40 px-4 py-1.5 backdrop-blur-sm transition-colors hover:border-neutral-400 hover:text-neutral-900">
-                                Log in
-                            </a>
-                        @endauth
-                    @endif
-                </nav>
+                <button type="button" class="mt-1 cursor-pointer" aria-label="{{ __('Open menu') }}">
+                    <img src="{{ asset('images/sidemenu-toggle.svg') }}" alt="" width="37.3037" height="15.5">
+                </button>
             </header>
 
-            <main class="mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center px-6 pb-16 pt-8 lg:px-10">
-                <section class="max-w-2xl">
-                    <p class="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
-                        Portfolio
-                    </p>
+            <main class="flex flex-1 items-center justify-center px-6 py-12 lg:px-0">
+                <div class="w-full max-w-[943px] font-['Crimson_Text'] text-black">
+                    <p class="text-xl text-[#4d463b]">Haloo, I’m Stephen</p>
 
-                    <h1 class="font-serif text-5xl font-medium leading-[1.1] tracking-tight text-neutral-900 sm:text-6xl lg:text-7xl">
-                        Crafting thoughtful digital experiences.
+                    <h1 class="mt-3.5 text-2xl font-normal leading-tight sm:text-[32px] sm:leading-9">
+                        A Full Stack Developer
+                        <span class="block text-[#1bf84c]">crafting scalable web and mobile systems from the ground up.</span>
                     </h1>
 
-                    <p class="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600">
-                        A clean canvas for work, ideas, and stories — built on a simple foundation and ready to grow.
-                    </p>
-
-                    <div class="mt-10 flex flex-wrap items-center gap-4">
-                        <a
-                            href="#work"
-                            class="inline-flex items-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-neutral-800"
-                        >
-                            View selected work
-                        </a>
-                        <a
-                            href="#contact"
-                            class="inline-flex items-center rounded-full border border-neutral-300/80 bg-white/40 px-6 py-3 text-sm font-medium text-neutral-800 backdrop-blur-sm transition-colors hover:border-neutral-400"
-                        >
-                            Get in touch
-                        </a>
+                    <div class="mt-6 text-lg sm:pl-[5px] sm:text-xl">
+                        <p class="max-w-[938px] text-justify">
+                            I have 6+ years building full-stack applications across Laravel, React Native, and React.js — from database design and RESTful API architecture to security implementation and performant, user-facing interfaces.
+                        </p>
+                        <p class="mt-[22px] max-w-[938px] text-justify">
+                            In my current role, I've been the developer consistently entrusted with new mobile initiatives — building a CRM application, an internal messaging platform, an AI-powered reporting system, and a data management system, each from the ground up. Across these projects I own the full lifecycle: architecture, development, and post-release support.
+                        </p>
+                        <p class="mt-[35px] max-w-[938px] text-justify">
+                            Before my current role, I spent four years as a developer at Xchanged Inc., building and scaling production systems across finance, logistics, and healthcare — platforms that handled real money, real patient data, and multi-tenant architectures serving clients in Guam and Singapore.
+                        </p>
+                        <p class="mt-[35px] max-w-[795px]">
+                            If you have questions or proposal, feel free to <a href="#contact" class="text-[#1bf84c] hover:underline">contact me</a>.
+                        </p>
                     </div>
-                </section>
-
-                <section id="work" class="mt-24 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    @foreach (['Project One', 'Project Two', 'Project Three'] as $project)
-                        <article class="group rounded-2xl border border-white/70 bg-white/35 p-6 shadow-sm backdrop-blur-sm transition-transform hover:-translate-y-0.5">
-                            <div class="mb-4 aspect-[4/3] rounded-xl bg-neutral-200/50"></div>
-                            <h2 class="font-serif text-xl font-medium text-neutral-900">
-                                {{ $project }}
-                            </h2>
-                            <p class="mt-2 text-sm leading-relaxed text-neutral-600">
-                                A placeholder card ready for case studies, screenshots, and project details.
-                            </p>
-                        </article>
-                    @endforeach
-                </section>
-
-                <section id="about" class="mt-24 max-w-2xl">
-                    <h2 class="font-serif text-3xl font-medium text-neutral-900">
-                        About
-                    </h2>
-                    <p class="mt-4 text-base leading-relaxed text-neutral-600">
-                        This page uses a crumpled paper texture as its full background, creating a soft, tactile design space for a personal portfolio. Replace this copy with your bio, skills, and story.
-                    </p>
-                </section>
-
-                <section id="contact" class="mt-24 max-w-2xl pb-8">
-                    <h2 class="font-serif text-3xl font-medium text-neutral-900">
-                        Contact
-                    </h2>
-                    <p class="mt-4 text-base leading-relaxed text-neutral-600">
-                        Interested in working together? Add your email, social links, or contact form here.
-                    </p>
-                    <a
-                        href="mailto:hello@example.com"
-                        class="mt-6 inline-flex text-sm font-medium text-neutral-900 underline underline-offset-4 transition-colors hover:text-neutral-600"
-                    >
-                        hello@example.com
-                    </a>
-                </section>
+                </div>
             </main>
+        </section>
 
-            <footer class="mx-auto w-full max-w-5xl px-6 py-8 text-sm text-neutral-500 lg:px-10">
-                <p>&copy; {{ date('Y') }} {{ config('app.name') }}. All rights reserved.</p>
-            </footer>
-        </div>
+        <footer id="contact" class="shrink-0 mt-0.5 min-h-[371px] bg-[rgba(77,70,59,0.49)] px-6 pt-[87px] pb-16 lg:px-0">
+            <div class="mx-auto max-w-[1000px]">
+                <div class="grid gap-8 sm:grid-cols-[477px_1fr]">
+                    <div>
+                        <h2 class="font-['Karla'] text-2xl font-medium text-[#fffeed]">Contacts</h2>
+                        <ul class="mt-2 space-y-2 text-xl font-semibold text-[#adffbf]">
+                            <li><a href="https://t.me/snehpets" class="hover:underline">t.me/snehpets</a></li>
+                            <li><a href="mailto:hello@snephets.dev" class="hover:underline">hello@snephets.dev</a></li>
+                        </ul>
+                    </div>
+
+                    <ul class="space-y-2 text-xl font-semibold text-[#adffbf] sm:pt-[41px]">
+                        <li><a href="#" class="hover:underline">My Craft</a></li>
+                        <li><a href="#" class="hover:underline">My Experience</a></li>
+                    </ul>
+                </div>
+
+                <img src="{{ asset('images/line.svg') }}" alt="" width="1000" height="2" class="mt-[26px] w-full">
+
+                <div class="mt-3 flex justify-end gap-[13px]">
+                    <a href="https://github.com/stephenprogramscoffee" target="_blank" aria-label="GitHub">
+                        <img src="{{ asset('images/github.svg') }}" alt="" width="50" height="50">
+                    </a>
+                    <a href="https://www.linkedin.com/in/stephensuniega/" target="_blank" aria-label="LinkedIn">
+                        <img src="{{ asset('images/linkedin.svg') }}" alt="" width="50" height="50">
+                    </a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

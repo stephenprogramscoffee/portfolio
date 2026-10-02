@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Grep",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/stephensuniega/docker-apps/portfolio/portfolio-web/.venv/bin/graphify hook-guard search",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "Read|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/stephensuniega/docker-apps/portfolio/portfolio-web/.venv/bin/graphify hook-guard read",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
