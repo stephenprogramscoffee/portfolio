@@ -402,9 +402,9 @@
     "semantic_hash": "7f3ed28bcfe2dd855cf09f43515ac9a3"
   },
   "resources/views/welcome.blade.php": {
-    "mtime": 1791117590.290639,
-    "seen": 1791117631.5385578,
-    "ast_hash": "7c7ca92dbf1c706e7ede4c1d909060ad",
+    "mtime": 1791116542.4206839,
+    "seen": 1791116573.3920355,
+    "ast_hash": "f867ab894084c58b451d5033aaef47b3",
     "semantic_hash": ""
   },
   "routes/auth.php": {
@@ -420,10 +420,10 @@
     "semantic_hash": "157ad0b9b9296dffe8c58855651fd02b"
   },
   "routes/web.php": {
-    "mtime": 1791117589.2576258,
-    "seen": 1791117631.5385613,
-    "ast_hash": "4a4809fa5826861de0181ebe4df9c54a",
-    "semantic_hash": ""
+    "mtime": 1740360550.0,
+    "seen": 1790959422.7625656,
+    "ast_hash": "7b4f5e7df52d76a1c45b8254735bdd7c",
+    "semantic_hash": "7b4f5e7df52d76a1c45b8254735bdd7c"
   },
   "tests/Feature/Auth/AuthenticationTest.php": {
     "mtime": 1740360550.0,
@@ -462,9 +462,9 @@
     "semantic_hash": "6cb662a59f94ba0ca4441e52581d4da4"
   },
   "tests/Feature/ExampleTest.php": {
-    "mtime": 1791117596.855277,
-    "seen": 1791117631.5385687,
-    "ast_hash": "f656fe7c05561adfbe5d39069ede6ffc",
+    "mtime": 1791116554.9697788,
+    "seen": 1791116573.392043,
+    "ast_hash": "b90a8116e715693e9cdb235614a33c63",
     "semantic_hash": ""
   },
   "tests/Feature/Settings/PasswordUpdateTest.php": {
@@ -1233,24 +1233,6 @@
     "mtime": 1791116104.9732096,
     "seen": 1791116113.480059,
     "ast_hash": "9634455c302c8c53c167cfa5b7125674",
-    "semantic_hash": ""
-  },
-  "resources/views/resume.blade.php": {
-    "mtime": 1791117588.1522303,
-    "seen": 1791117631.5385554,
-    "ast_hash": "6ff81bad6d8d95bd39d75f7861824ea2",
-    "semantic_hash": ""
-  },
-  "tests/Feature/ResumePageTest.php": {
-    "mtime": 1791117610.0646803,
-    "seen": 1791117631.5385697,
-    "ast_hash": "8f68c60475d984226d36e69fc89da43b",
-    "semantic_hash": ""
-  },
-  "public/landing/file-text.svg": {
-    "mtime": 1791117587.066232,
-    "seen": 1791117631.5386786,
-    "ast_hash": "b5c8438b593d4e02897fa226555c83b7",
     "semantic_hash": ""
   }
 }

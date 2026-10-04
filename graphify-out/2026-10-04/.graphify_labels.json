@@ -124,7 +124,5 @@
   "122": "Illuminate\\Foundation\\Testing\\RefreshDatabase",
   "123": "AuthenticationTest",
   "124": "DatabaseSeeder.php",
-  "125": "livewire.php",
-  "126": "ResumePageTest",
-  "127": "resume.blade.php"
+  "125": "livewire.php"
 }

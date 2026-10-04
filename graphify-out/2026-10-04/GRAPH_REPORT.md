@@ -1,12 +1,12 @@
 # Graph Report - portfolio-web  (2026-10-04)
 
 ## Corpus Check
-- 178 files · ~190,758 words
+- 176 files · ~189,705 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 23 file(s) not represented in the graph (top: (none) 18, .graphify-bak 1, .example 1)
 
 ## Summary
-- 848 nodes · 902 edges · 128 communities (53 shown, 75 thin omitted)
+- 838 nodes · 890 edges · 126 communities (53 shown, 73 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 57 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
@@ -105,14 +105,12 @@
 - Illuminate\Foundation\Testing\RefreshDatabase
 - AuthenticationTest
 - DatabaseSeeder.php
-- ResumePageTest
-- resume.blade.php
 
 ## God Nodes (most connected - your core abstractions)
 1. `User` - 36 edges
-2. `TestCase` - 22 edges
+2. `Laravel Best Practices Skill` - 21 edges
 3. `Laravel Best Practices Skill` - 21 edges
-4. `Laravel Best Practices Skill` - 21 edges
+4. `TestCase` - 20 edges
 5. `Quick Reference` - 20 edges
 6. `graphify skill (/graphify)` - 15 edges
 7. `Pin footer to page bottom; vertically center hero text` - 12 edges
@@ -146,7 +144,7 @@
 - **Frontend UI Skill Stack (Volt/Flux/Tailwind)** — _cursor_skills_fluxui_development_skill_flux_ui_development_skill, _cursor_skills_tailwindcss_development_skill_tailwind_css_development_skill, _cursor_skills_volt_development_skill_volt_development_skill [INFERRED 0.85]
 - **Transaction-Safe Dispatch (afterCommit)** — _cursor_skills_laravel_best_practices_rules_events_notifications_shoulddispatchaftercommit, _cursor_skills_laravel_best_practices_rules_events_notifications_aftercommit_in_transactions, _cursor_skills_laravel_best_practices_rules_mail_queued_mailables_shouldqueue [INFERRED 0.85]
 
-## Communities (128 total, 75 thin omitted)
+## Communities (126 total, 73 thin omitted)
 
 ### Community 0 - "User"
 Cohesion: 0.18
@@ -357,25 +355,25 @@ Cohesion: 0.40
 Nodes (4): Plan file template, Role: Planner, Rules, Steps
 
 ### Community 122 - "Illuminate\Foundation\Testing\RefreshDatabase"
-Cohesion: 0.18
-Nodes (3): RegistrationTest, PasswordUpdateTest, ExampleTest
+Cohesion: 0.19
+Nodes (3): DashboardTest, PasswordUpdateTest, ExampleTest
 
 ## Knowledge Gaps
-- **336 isolated node(s):** `wsl.exe`, `wsl.exe`, `$schema`, `name`, `type` (+331 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 536 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **75 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **335 isolated node(s):** `wsl.exe`, `wsl.exe`, `$schema`, `name`, `type` (+330 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 528 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **73 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `User` connect `User` to `TestCase`, `Eloquent Best Practices`, `PasswordResetTest.php`, `EmailVerificationTest.php`, `Conventions & Style`, `Illuminate\Foundation\Testing\RefreshDatabase`, `AuthenticationTest`, `DatabaseSeeder.php`?**
-  _High betweenness centrality (0.028) - this node is a cross-community bridge._
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
 - **Why does `Laravel Best Practices Skill` connect `Laravel Best Practices Skill` to `Flux UI Development Skill`, `Caching Best Practices`, `Eloquent Best Practices`, `Database Performance Best Practices`, `Error Handling Best Practices`, `Architecture Best Practices`, `Advanced Query Patterns`, `Routing & Controllers Best Practices`, `Events & Notifications Best Practices`, `Queue & Job Best Practices`, `Security Best Practices`?**
   _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **Why does `Quick Reference` connect `Quick Reference` to `Eloquent Best Practices`?**
+- **Why does `Laravel Best Practices Skill` connect `Laravel Best Practices Skill` to `Caching Best Practices`, `Collection Best Practices`, `Database Performance Best Practices`, `Security Best Practices`, `Eloquent Best Practices`, `Error Handling Best Practices`, `Events & Notifications Best Practices`, `Queue & Job Best Practices`, `HTTP Client Best Practices`, `Architecture Best Practices`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **What connects `wsl.exe`, `wsl.exe`, `$schema` to the rest of the system?**
-  _336 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _335 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
 - **Should `Eloquent Best Practices` be split into smaller, more focused modules?**
