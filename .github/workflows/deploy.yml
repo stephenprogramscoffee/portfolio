@@ -31,3 +31,21 @@ jobs:
             # Copy to the web root (adjust the paths to your setup)
             rsync -av --exclude='.git' --exclude='.env' --exclude='storage' ./ /home/gfpfypph/laravel-app/
             rsync -av ./public/ /home/gfpfypph/public_html/
+              - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Upload built assets
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "public/build/*"
+          target: "/home/gfpfypph/repositories/portfolio/"
