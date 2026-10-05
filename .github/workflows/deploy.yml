@@ -65,8 +65,8 @@ jobs:
             fi
 
             cd $APP
-            git fetch origin main
-            git reset --hard origin/main
+            git fetch origin master
+            git reset --hard origin/master
 
             $COMPOSER install --no-dev --optimize-autoloader --no-interaction
 
