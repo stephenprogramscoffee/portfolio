@@ -65,6 +65,7 @@ jobs:
             fi
 
             cd $APP
+            git pull origin master
             git fetch origin master
             git reset --hard origin/master
 
