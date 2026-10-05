@@ -10,13 +10,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer:v2
+
+      - name: Install PHP dependencies
+        run: composer install --no-dev --prefer-dist --no-progress --optimize-autoloader
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      - run: npm ci
-      - run: npm run build
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Build assets
+        run: npm run build
 
       - name: Upload built assets
         uses: appleboy/scp-action@v0.1.7
@@ -27,7 +39,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           source: "public/build"
           target: "/home/gfpfypph/repositories/portfolio/public/"
-          strip_components: 2
+          strip_components: 1
           overwrite: true
 
       - name: Deploy over SSH
@@ -43,15 +55,26 @@ jobs:
             APP=/home/gfpfypph/repositories/portfolio
             WEB=/home/gfpfypph/public_html
 
+            # Pick whichever Composer exists on the server
+            if [ -x "$HOME/bin/composer" ]; then
+              COMPOSER="$HOME/bin/composer"
+            elif [ -f "$HOME/composer.phar" ]; then
+              COMPOSER="$PHP $HOME/composer.phar"
+            else
+              COMPOSER="$PHP /opt/cpanel/composer/bin/composer"
+            fi
+
             cd $APP
             git fetch origin main
             git reset --hard origin/main
 
-            $PHP /home/gfpfypph/bin/composer install --no-dev --optimize-autoloader
+            $COMPOSER install --no-dev --optimize-autoloader --no-interaction
 
+            $PHP artisan config:clear
             $PHP artisan config:cache
             $PHP artisan route:cache
             $PHP artisan view:cache
 
-            # Copy public/ into public_html, but keep the edited index.php
+            # Copy public/ into public_html, keeping your edited index.php
+            rm -rf $WEB/build
             tar --exclude='./index.php' -cf - -C $APP/public . | tar -xf - -C $WEB
