@@ -1,17 +1,17 @@
-# Graph Report - portfolio-web  (2026-10-04)
+# Graph Report - portfolio-web  (2026-10-06)
 
 ## Corpus Check
-- 178 files · ~190,758 words
+- 178 files · ~191,658 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 23 file(s) not represented in the graph (top: (none) 18, .graphify-bak 1, .example 1)
 
 ## Summary
-- 848 nodes · 902 edges · 128 communities (53 shown, 75 thin omitted)
+- 849 nodes · 903 edges · 128 communities (53 shown, 75 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 57 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a7553bb4`
+- Built from commit: `6cbd8128`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -116,9 +116,9 @@
 5. `Quick Reference` - 20 edges
 6. `graphify skill (/graphify)` - 15 edges
 7. `Pin footer to page bottom; vertically center hero text` - 12 edges
-8. `Architecture Best Practices` - 11 edges
-9. `Security Best Practices` - 11 edges
-10. `ExampleTest` - 10 edges
+8. `ExampleTest` - 11 edges
+9. `Architecture Best Practices` - 11 edges
+10. `Security Best Practices` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Follow Laravel Naming Conventions` --references--> `User`  [INFERRED]
@@ -362,7 +362,7 @@ Nodes (3): RegistrationTest, PasswordUpdateTest, ExampleTest
 
 ## Knowledge Gaps
 - **336 isolated node(s):** `wsl.exe`, `wsl.exe`, `$schema`, `name`, `type` (+331 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 536 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 537 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **75 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions

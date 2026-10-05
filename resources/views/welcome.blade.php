@@ -14,12 +14,14 @@
     $experiences = [
         [
             'company' => 'Bell-Kenz Pharma, Inc.',
+            'role' => 'Full Stack Developer',
             'summary' => 'Build internal mobile and web applications end-to-end with Laravel and React Native, including an AI-powered conversational reporting system and a gamified reporting app for physicians.',
             'period' => 'Apr 2024 - Present',
             'line' => ['src' => 'landing/timeline-line-1.svg', 'width' => 147.746, 'height' => 9.98294, 'boxHeight' => 139.76],
         ],
         [
             'company' => 'Xchanged Inc.',
+            'role' => 'Software Developer',
             'summary' => 'Delivered production systems for clients in Guam and Singapore across remittance, resort management, ordering, and medical records, using Laravel, React Native, and Vue.js.',
             'period' => 'Feb 2020 - Apr 2024',
             'line' => ['src' => 'landing/timeline-line-2.svg', 'width' => 144.734, 'height' => 9.98294, 'boxHeight' => 136.748],
@@ -128,6 +130,7 @@
                             </div>
 
                             <h3 class="text-[24px] leading-[39px] font-bold">{{ $experience['company'] }}</h3>
+                            <p class="text-[18px] leading-[28px] font-semibold text-white">{{ $experience['role'] }}</p>
                             <p class="mt-1 max-w-[681px] sm:text-justify text-[16px] leading-[28px] font-bold text-[#aaa]">{{ $experience['summary'] }}</p>
                             <p class="mt-[11px] text-[16px] leading-[28px] font-semibold text-[#6ac548]">{{ $experience['period'] }}</p>
                         </li>

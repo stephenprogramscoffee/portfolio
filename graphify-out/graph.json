@@ -1241,7 +1241,7 @@
       "file_type": "code",
       "norm_label": ".test_every_referenced_landing_asset_exists()",
       "source_file": "tests/Feature/ExampleTest.php",
-      "source_location": "L92"
+      "source_location": "L104"
     },
     {
       "id": "tests_feature_exampletest_exampletest_test_intro_shows_photo_logo_and_social_links",
@@ -1253,7 +1253,7 @@
       "file_type": "code",
       "norm_label": ".test_intro_shows_photo_logo_and_social_links()",
       "source_file": "tests/Feature/ExampleTest.php",
-      "source_location": "L47"
+      "source_location": "L57"
     },
     {
       "id": "tests_feature_exampletest_exampletest_test_navigation_links_to_each_section",
@@ -1264,6 +1264,18 @@
       "community_name": "ExampleTest",
       "file_type": "code",
       "norm_label": ".test_navigation_links_to_each_section()",
+      "source_file": "tests/Feature/ExampleTest.php",
+      "source_location": "L34"
+    },
+    {
+      "id": "tests_feature_exampletest_exampletest_test_page_title_and_favicon_use_site_branding",
+      "label": ".test_page_title_and_favicon_use_site_branding()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "ExampleTest",
+      "file_type": "code",
+      "norm_label": ".test_page_title_and_favicon_use_site_branding()",
       "source_file": "tests/Feature/ExampleTest.php",
       "source_location": "L24"
     },
@@ -1289,7 +1301,7 @@
       "file_type": "code",
       "norm_label": ".test_sections_after_intro_fade_while_intro_stays_visible()",
       "source_file": "tests/Feature/ExampleTest.php",
-      "source_location": "L37"
+      "source_location": "L47"
     },
     {
       "id": "tests_feature_exampletest_exampletest_test_tech_stack_lists_every_tool_in_grid_order",
@@ -1301,7 +1313,7 @@
       "file_type": "code",
       "norm_label": ".test_tech_stack_lists_every_tool_in_grid_order()",
       "source_file": "tests/Feature/ExampleTest.php",
-      "source_location": "L78"
+      "source_location": "L90"
     },
     {
       "id": "tests_feature_exampletest_exampletest_test_work_experience_lists_roles_in_order",
@@ -1313,7 +1325,7 @@
       "file_type": "code",
       "norm_label": ".test_work_experience_lists_roles_in_order()",
       "source_file": "tests/Feature/ExampleTest.php",
-      "source_location": "L59"
+      "source_location": "L69"
     },
     {
       "id": "app_models_user",
@@ -1360,14 +1372,14 @@
       "source_location": ""
     },
     {
-      "id": "tests_feature_auth_passwordconfirmationtest",
-      "label": "PasswordConfirmationTest.php",
+      "id": "tests_feature_settings_profileupdatetest",
+      "label": "ProfileUpdateTest.php",
       "_origin": "ast",
       "community": 0,
       "community_name": "User",
       "file_type": "code",
-      "norm_label": "passwordconfirmationtest.php",
-      "source_file": "tests/Feature/Auth/PasswordConfirmationTest.php",
+      "norm_label": "profileupdatetest.php",
+      "source_file": "tests/Feature/Settings/ProfileUpdateTest.php",
       "source_location": "L1"
     },
     {
@@ -2678,6 +2690,17 @@
       "source_location": "L35"
     },
     {
+      "id": "illuminate_auth_events_verified",
+      "label": "Illuminate\\Auth\\Events\\Verified",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "EmailVerificationTest.php",
+      "file_type": "code",
+      "norm_label": "illuminate\\auth\\events\\verified",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "illuminate_support_facades_event",
       "label": "Illuminate\\Support\\Facades\\Event",
       "_origin": "ast",
@@ -3401,17 +3424,6 @@
       "source_location": "L1"
     },
     {
-      "id": "illuminate_auth_events_verified",
-      "label": "Illuminate\\Auth\\Events\\Verified",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "VerifyEmailController.php",
-      "file_type": "code",
-      "norm_label": "illuminate\\auth\\events\\verified",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "illuminate_foundation_auth_emailverificationrequest",
       "label": "Illuminate\\Foundation\\Auth\\EmailVerificationRequest",
       "_origin": "ast",
@@ -3647,6 +3659,17 @@
       "source_location": "L1"
     },
     {
+      "id": "tests_feature_auth_passwordconfirmationtest",
+      "label": "PasswordConfirmationTest.php",
+      "_origin": "ast",
+      "community": 122,
+      "community_name": "Illuminate\\Foundation\\Testing\\RefreshDatabase",
+      "file_type": "code",
+      "norm_label": "passwordconfirmationtest.php",
+      "source_file": "tests/Feature/Auth/PasswordConfirmationTest.php",
+      "source_location": "L1"
+    },
+    {
       "id": "tests_feature_auth_registrationtest",
       "label": "RegistrationTest.php",
       "_origin": "ast",
@@ -3666,17 +3689,6 @@
       "file_type": "code",
       "norm_label": "passwordupdatetest.php",
       "source_file": "tests/Feature/Settings/PasswordUpdateTest.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_feature_settings_profileupdatetest",
-      "label": "ProfileUpdateTest.php",
-      "_origin": "ast",
-      "community": 122,
-      "community_name": "Illuminate\\Foundation\\Testing\\RefreshDatabase",
-      "file_type": "code",
-      "norm_label": "profileupdatetest.php",
-      "source_file": "tests/Feature/Settings/ProfileUpdateTest.php",
       "source_location": "L1"
     },
     {
@@ -17240,6 +17252,17 @@
     },
     {
       "source": "tests_feature_exampletest_exampletest",
+      "target": "tests_feature_exampletest_exampletest_test_every_referenced_landing_asset_exists",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/Feature/ExampleTest.php",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_feature_exampletest_exampletest",
       "target": "tests_feature_exampletest_exampletest_test_returns_a_successful_response",
       "relation": "method",
       "_origin": "ast",
@@ -17251,7 +17274,7 @@
     },
     {
       "source": "tests_feature_exampletest_exampletest",
-      "target": "tests_feature_exampletest_exampletest_test_navigation_links_to_each_section",
+      "target": "tests_feature_exampletest_exampletest_test_page_title_and_favicon_use_site_branding",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -17262,18 +17285,18 @@
     },
     {
       "source": "tests_feature_exampletest_exampletest",
-      "target": "tests_feature_exampletest_exampletest_test_sections_after_intro_fade_while_intro_stays_visible",
+      "target": "tests_feature_exampletest_exampletest_test_navigation_links_to_each_section",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Feature/ExampleTest.php",
-      "source_location": "L37",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
       "source": "tests_feature_exampletest_exampletest",
-      "target": "tests_feature_exampletest_exampletest_test_intro_shows_photo_logo_and_social_links",
+      "target": "tests_feature_exampletest_exampletest_test_sections_after_intro_fade_while_intro_stays_visible",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -17284,13 +17307,24 @@
     },
     {
       "source": "tests_feature_exampletest_exampletest",
+      "target": "tests_feature_exampletest_exampletest_test_intro_shows_photo_logo_and_social_links",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/Feature/ExampleTest.php",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_feature_exampletest_exampletest",
       "target": "tests_feature_exampletest_exampletest_test_work_experience_lists_roles_in_order",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Feature/ExampleTest.php",
-      "source_location": "L59",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -17301,18 +17335,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Feature/ExampleTest.php",
-      "source_location": "L78",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_feature_exampletest_exampletest",
-      "target": "tests_feature_exampletest_exampletest_test_every_referenced_landing_asset_exists",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/Feature/ExampleTest.php",
-      "source_location": "L92",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -21157,5 +21180,5 @@
       "source_file": ".cursor/skills/laravel-best-practices/rules/events-notifications.md"
     }
   ],
-  "built_at_commit": "a7553bb4ad3bc98f21386925aec3e0ab5db524a5"
+  "built_at_commit": "6cbd8128566bbda02726950c46a84dfc117a8f3b"
 }

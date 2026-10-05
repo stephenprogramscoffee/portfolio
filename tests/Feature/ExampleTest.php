@@ -21,6 +21,16 @@ class ExampleTest extends TestCase
         $response->assertSee('geologica:400,500,600,700', false);
     }
 
+    public function test_page_title_and_favicon_use_site_branding(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertSee('<title>'.e(config('app.name')).'</title>', false);
+        $response->assertSee('<link rel="icon" href="'.asset('intro-imgs/stephen_logo_s.png').'" type="image/png">', false);
+        $response->assertDontSee('<title>Laravel</title>', false);
+        $this->assertSame("Stephen's Website", config('app.name'));
+    }
+
     public function test_navigation_links_to_each_section(): void
     {
         $response = $this->get('/');
@@ -67,8 +77,10 @@ class ExampleTest extends TestCase
         $response->assertSee('landing/file-text.svg', false);
         $response->assertSeeInOrder([
             'Bell-Kenz Pharma, Inc.',
+            'Full Stack Developer',
             'Apr 2024 - Present',
             'Xchanged Inc.',
+            'Software Developer',
             'Feb 2020 - Apr 2024',
         ]);
         $response->assertSee('landing/timeline-line-1.svg', false);

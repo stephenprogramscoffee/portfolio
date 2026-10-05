@@ -90,10 +90,10 @@
     "semantic_hash": "a3b03f937354de760bfc374921ce0842"
   },
   "config/app.php": {
-    "mtime": 1740360550.0,
-    "seen": 1790959422.7625225,
-    "ast_hash": "6329d6ab7faa180c6aa39577fd180bb5",
-    "semantic_hash": "6329d6ab7faa180c6aa39577fd180bb5"
+    "mtime": 1791219800.7921753,
+    "seen": 1791219818.1701424,
+    "ast_hash": "187435720d540337335b2835da044c13",
+    "semantic_hash": ""
   },
   "config/auth.php": {
     "mtime": 1740360550.0,
@@ -390,10 +390,10 @@
     "semantic_hash": "55f245f1a3b57a1496ea07422fa6ec87"
   },
   "resources/views/partials/head.blade.php": {
-    "mtime": 1740360550.0,
-    "seen": 1790959422.7625618,
-    "ast_hash": "27cbf271080b226053e1de89aa687294",
-    "semantic_hash": "27cbf271080b226053e1de89aa687294"
+    "mtime": 1791219799.511555,
+    "seen": 1791219818.1702452,
+    "ast_hash": "b5c114db6beb1025d3294b6cf750147b",
+    "semantic_hash": ""
   },
   "resources/views/partials/settings-heading.blade.php": {
     "mtime": 1740360550.0,
@@ -402,9 +402,9 @@
     "semantic_hash": "7f3ed28bcfe2dd855cf09f43515ac9a3"
   },
   "resources/views/welcome.blade.php": {
-    "mtime": 1791117590.290639,
-    "seen": 1791117631.5385578,
-    "ast_hash": "7c7ca92dbf1c706e7ede4c1d909060ad",
+    "mtime": 1791219801.0322917,
+    "seen": 1791219818.1702502,
+    "ast_hash": "3b55c373a8733bc8183ffb2de7986b7f",
     "semantic_hash": ""
   },
   "routes/auth.php": {
@@ -462,9 +462,9 @@
     "semantic_hash": "6cb662a59f94ba0ca4441e52581d4da4"
   },
   "tests/Feature/ExampleTest.php": {
-    "mtime": 1791117596.855277,
-    "seen": 1791117631.5385687,
-    "ast_hash": "f656fe7c05561adfbe5d39069ede6ffc",
+    "mtime": 1791219811.3416936,
+    "seen": 1791219818.1702662,
+    "ast_hash": "c5a7f47a4209e2fd6227bc94602b86d8",
     "semantic_hash": ""
   },
   "tests/Feature/Settings/PasswordUpdateTest.php": {
@@ -1251,6 +1251,18 @@
     "mtime": 1791117587.066232,
     "seen": 1791117631.5386786,
     "ast_hash": "b5c8438b593d4e02897fa226555c83b7",
+    "semantic_hash": ""
+  },
+  ".github/workflows/deploy.yml": {
+    "mtime": 1791216560.8772252,
+    "seen": 1791219818.170379,
+    "ast_hash": "bcbf04abaae47eba190aabf4c125be4e",
+    "semantic_hash": ""
+  },
+  "public/intro-imgs/stephen_logo_s.png": {
+    "mtime": 1791219789.8785298,
+    "seen": 1791219818.170396,
+    "ast_hash": "e4dc864eac5b7f3ce65ca07589c93b43",
     "semantic_hash": ""
   }
 }
