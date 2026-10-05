@@ -8,30 +8,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy over SSH
-        uses: appleboy/ssh-action@v1
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          port: ${{ secrets.SSH_PORT }}
-          key: ${{ secrets.SSH_KEY }}
-          script_stop: true
-          script: |
-            cd /home/gfpfypph/repositories/portfolio
-            git fetch origin main
-            git reset --hard origin/main
+      - uses: actions/checkout@v4
 
-            # Laravel steps (remove if not Laravel)
-            composer install --no-dev --optimize-autoloader
-            php artisan migrate --force
-            php artisan config:cache
-            php artisan route:cache
-            php artisan view:cache
-
-            # Copy to the web root (adjust the paths to your setup)
-            rsync -av --exclude='.git' --exclude='.env' --exclude='storage' ./ /home/gfpfypph/laravel-app/
-            rsync -av ./public/ /home/gfpfypph/public_html/
-              - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -47,5 +25,33 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
-          source: "public/build/*"
-          target: "/home/gfpfypph/repositories/portfolio/"
+          source: "public/build"
+          target: "/home/gfpfypph/repositories/portfolio/public/"
+          strip_components: 2
+          overwrite: true
+
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }}
+          script_stop: true
+          script: |
+            PHP=/opt/cpanel/ea-php83/root/usr/bin/php
+            APP=/home/gfpfypph/repositories/portfolio
+            WEB=/home/gfpfypph/public_html
+
+            cd $APP
+            git fetch origin main
+            git reset --hard origin/main
+
+            $PHP /home/gfpfypph/bin/composer install --no-dev --optimize-autoloader
+
+            $PHP artisan config:cache
+            $PHP artisan route:cache
+            $PHP artisan view:cache
+
+            # Copy public/ into public_html, but keep the edited index.php
+            tar --exclude='./index.php' -cf - -C $APP/public . | tar -xf - -C $WEB
