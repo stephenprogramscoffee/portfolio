@@ -13,7 +13,7 @@
     $experiences = [
         [
             'company' => 'Bell-Kenz Pharma, Inc.',
-            'role' => 'Mid-Level Full Stack Developer',
+            'role' => 'Full Stack Developer',
             'period' => 'Apr 2024 - Present',
             'summary' => 'Develop full-stack mobile and web applications using Laravel, PHP, React Native, Expo, and MySQL to support internal business operations.',
             'highlights' => [
@@ -122,9 +122,9 @@
                             @foreach ($experiences as $experience)
                                 <li>
                                     <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-                                        <h3 class="text-[16px]">
-                                            <span class="font-semibold">{{ $experience['company'] }}</span>
-                                            <span class="ml-1 font-medium text-[#aaa]">&mdash; {{ $experience['role'] }}</span>
+                                        <h3 class="flex flex-col text-[16px]">
+                                            <span class="font-semibold text-[20px]">{{ $experience['role'] }}</span>
+                                            <span class="font-medium text-[#aaa]">{{ $experience['company'] }}</span>
                                         </h3>
                                         <p class="text-[16px] font-medium text-[#aaa]">{{ $experience['period'] }}</p>
                                     </div>
