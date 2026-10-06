@@ -123,8 +123,8 @@
                                 <li>
                                     <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
                                         <h3 class="flex flex-col text-[16px]">
-                                            <span class="font-semibold text-[20px]">{{ $experience['role'] }}</span>
                                             <span class="font-medium text-[#aaa]">{{ $experience['company'] }}</span>
+                                            <span class="font-semibold text-[20px]">{{ $experience['role'] }}</span>
                                         </h3>
                                         <p class="text-[16px] font-medium text-[#aaa]">{{ $experience['period'] }}</p>
                                     </div>
